@@ -1,36 +1,24 @@
 ---
 // import '../styles/global.css'
 import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
-const pageName = "Aashiq's Projects";
+const pageTitle = "Aashiq's Projects";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageName}</title>
-	</head>
-
-	<body class="antialiased max-w-xl mb-40 mx-4 mt-14 sm:mx-auto bg-slate-50 min-w-0 flex-col px-2">
-			<Navigation pageTitle ={pageName} />
-
-			<div class="">
-				<img class="w-full object-cover aspect-[3/1] bg-center mb-2" src={frontmatter.image.url} alt={frontmatter.image.alt}>
-				<div class="text-lg inline-block opacity-50">
-					{frontmatter.title}
-				</div>
-				<div class="text-xl">
-					{frontmatter.subtitle}
-				</div>
-				<hr>
-				<br>
-				<slot/>
-			</div>
-
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<div class="">
+		<img class="w-full object-cover aspect-[3/1] bg-center mb-2" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+		<div class="text-lg inline-block opacity-50">
+			{frontmatter.title}
+		</div>
+		<div class="text-xl">
+			{frontmatter.subtitle}
+		</div>
+		<hr>
+		<br>
+		<slot/>
+	</div>
+</BaseLayout>
