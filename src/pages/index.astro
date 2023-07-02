@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Aashiq Shaikh";
 import BlogCard from '../components/BlogCard.astro';
 
-const allPosts = await Astro.glob('../pages/posts/*.md');
+const allProjects = await Astro.glob('../pages/posts/*.md');
 
 const featuredPosts = ["vss", "aivrit"]
 ---
@@ -24,10 +24,10 @@ const featuredPosts = ["vss", "aivrit"]
 
 	<div class="my-8">
 		Featured Projects:
-		{allPosts.map((post) => 
-		featuredPosts.includes(post.frontmatter.code) ? 
+		{allProjects.map((project) => 
+		featuredPosts.includes(project.frontmatter.code) ? 
 		
-		<BlogCard title={post.frontmatter.title} description={post.frontmatter.description} imageURL={post.frontmatter.image.url} imageAlt={post.frontmatter.image.alt} subtitle={post.frontmatter.subtitle} url={post.url} tools={post.frontmatter.tools}/> : null
+		<BlogCard title={project.frontmatter.title} description={project.frontmatter.description} imageURL={project.frontmatter.image.url} imageAlt={project.frontmatter.image.alt} subtitle={project.frontmatter.subtitle} url={project.url} tools={project.frontmatter.tools}/> : null
 		)}
 	</div>
 </BaseLayout>
