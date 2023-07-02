@@ -14,21 +14,28 @@ const navItems = [
 	}
 ];
 
+const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 ---
 
-
-
-<div class="inline-flex justify-start font-light mb-8">
-	{navItems.map((item, index) =>
-		<a class="pr-4" href={item.url}>
-		{
-			Astro.url.pathname === item.url ?
-				<span class="transition font-bold overline">{item.name}</span> : null
-		}
-		{
-			Astro.url.pathname !== item.url ?
-				<span class="hover:underline hover:underline-offset-4 transition duration-1000">{item.name}</span> : null
-		}
-		</a>
-	)}
+<div class="grid grid-cols-7 opacity-30 hover:opacity-100 transition-opacity">
+	<div class="justify-self-start font-normal tracking-widest text-xl font-sans col-span-3 px-1">
+		{pageTitle}
+	</div>
+	<div class="flex font-light justify-end items-end col-span-4">
+		{navItems.map((item, index) =>
+			<a class="px-1.5 flex-initial hover:-translate-y-0.5 transition" href={item.url}>
+			{
+				Astro.url.pathname === item.url ?
+					<span class="transition overline ">{item.name}</span> : null
+			}
+			{
+				Astro.url.pathname !== item.url ?
+					<span class="hover:underline hover:underline-offset-2 font-bold ">{item.name}</span> : null
+			}
+			</a>
+		)}
+	</div>
 </div>
+
+
+<hr>

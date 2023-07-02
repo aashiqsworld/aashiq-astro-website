@@ -9,7 +9,7 @@ const {title, subtitle, description, imageURL, imageAlt, url, tools} = Astro.pro
 	  </div>
 	  <div class="py-4 px-6">
 		<div class="uppercase tracking-wide text-sm text-slate-400 font-semibold">{title}</div>
-		<a href={url} class="block mt-1 text-md leading-tight font-medium text-black hover:underline">{subtitle}</a>
+		<a href={url} class="block mt-1 text-md leading-tight font-medium text-black hover:underline line-clamp-1 hyphens-auto">{subtitle}</a>
 		<!-- <p class="mt-2 text-slate-500 truncate"><span class="inline rounded-full">{tools.map((tool) => tool)}</span></p> -->
 	  </div>
 	</div>

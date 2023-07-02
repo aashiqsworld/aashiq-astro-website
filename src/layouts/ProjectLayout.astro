@@ -1,13 +1,10 @@
 ---
 // import '../styles/global.css'
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
 
+const { frontmatter } = Astro.props;
+const pageName = "Aashiq's Projects";
 
-const {pageTitle = "Aashiq Shaikh"} = Astro.props;
-
-
-const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <html lang="en">
@@ -16,16 +13,21 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{pageName}</title>
 	</head>
 
-	
-	
 	<body class="antialiased max-w-xl mb-40 mx-4 mt-14 sm:mx-auto bg-slate-50 min-w-0 flex-col px-2">
-			<Navigation pageTitle = {pageTitle}/>
-			<br>
-			
+			<Navigation pageTitle ={pageName} />
+
 			<div class="">
+				<img class="w-full object-cover aspect-[3/1] bg-center mb-2" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+				<div class="text-lg inline-block opacity-50">
+					{frontmatter.title}
+				</div>
+				<div class="text-xl">
+					{frontmatter.subtitle}
+				</div>
+				<br>
 				<slot/>
 			</div>
 

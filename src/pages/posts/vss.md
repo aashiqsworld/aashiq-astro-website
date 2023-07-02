@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/ProjectLayout.astro
 title: 'Volumetric Streaming Systems'
 subtitle: 'Low-Latency Streaming of Live Volumetric Data'
 code: 'vss'

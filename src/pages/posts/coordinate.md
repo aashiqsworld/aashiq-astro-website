@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/ProjectLayout.astro
 title: 'Coordinate'
 subtitle: 'Spreadsheet-programmable AR Framework for Immersive Map-based Visualizations'
 code: 'coordinate'

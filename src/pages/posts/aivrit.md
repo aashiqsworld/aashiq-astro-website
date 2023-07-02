@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/ProjectLayout.astro
+
 title: 'AI-Directed Immersive Theater'
 subtitle: 'Exploring VR performer interfaces for Human-AI collaboration of real-time virtual stage management'
 code: 'aivrit'
