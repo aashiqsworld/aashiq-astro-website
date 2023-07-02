@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Aashiq's Projects";
+import BlogCard from '../components/BlogCard.astro';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<BaseLayout pageTitle={pageTitle}>
+
+	<div class="my-8">
+		{allPosts.map((post) => 
+		<BlogCard title={post.frontmatter.title} description={post.frontmatter.description} imageURL={post.frontmatter.image.url} imageAlt={post.frontmatter.image.alt} subtitle={post.frontmatter.subtitle} url={post.url} tools={post.frontmatter.tools} />
+		)}
+	</div>
+</BaseLayout>

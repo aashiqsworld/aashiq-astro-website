@@ -1,0 +1,34 @@
+---
+const navItems = [
+	{
+		name: "Home",
+		url: "/"
+	},
+	{
+		name: "Projects",
+		url: "/projects"
+	},
+	{
+		name: "About",
+		url: "/about"
+	}
+];
+
+---
+
+
+
+<div class="inline-flex justify-start font-light mb-8">
+	{navItems.map((item, index) =>
+		<a class="pr-4" href={item.url}>
+		{
+			Astro.url.pathname === item.url ?
+				<span class="transition font-bold overline">{item.name}</span> : null
+		}
+		{
+			Astro.url.pathname !== item.url ?
+				<span class="hover:underline hover:underline-offset-4 transition duration-1000">{item.name}</span> : null
+		}
+		</a>
+	)}
+</div>
