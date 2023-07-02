@@ -1,6 +1,6 @@
 # Aashiq's Personal Website
 
-#### Built with Astro and Tailwind CSS
+#### Built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## 🚀 Project Structure
 
