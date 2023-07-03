@@ -2,14 +2,14 @@
 const {title, subtitle, description, imageURL, imageAlt, url, tools} = Astro.props;
 ---
 
-<div class="w-full mx-auto rounded-sm shadow-sm overflow-hidden transition duration-300 ease-out hover:shadow-lg hover:-translate-y-0.5 hover:translate-x-0.5 mt-2 md:saturate-50 md:brightness-90 hover:saturate-200 hover:brightness-100 " >
+<div class="w-full mx-auto rounded-sm shadow-sm overflow-hidden transition duration-300 ease-out hover:shadow-lg hover:-translate-y-0.5 hover:translate-x-0.5 mt-2  hover:saturate-200 hover:brightness-100 group" >
 	<div class="md:flex ">
 	  <div class="md:shrink-0">
-		<img class="h-48 w-full object-cover md:h-full md:w-48 aspect-[2/1] bg-center" src={imageURL} alt={imageAlt}>
+		<img class="h-48 w-full object-cover md:h-full md:w-48 aspect-[3/1] bg-center opacity-50 group-hover:opacity-100" src={imageURL} alt={imageAlt}>
 	  </div>
 	  <div class="py-4 px-6">
 		<div class="uppercase tracking-wide text-sm text-slate-400 font-semibold">{title}</div>
-		<a href={url} class="block mt-1 text-md leading-tight font-medium text-black hover:underline line-clamp-1 hyphens-auto">{subtitle}</a>
+		<a href={url} class="block mt-1 text-md leading-tight font-medium text-black hover:underline line-clamp-1 hyphens-auto"><span class="line-clamp-2">{subtitle}</span></a>
 		<!-- <p class="mt-2 text-slate-500 truncate"><span class="inline rounded-full">{tools.map((tool) => tool)}</span></p> -->
 	  </div>
 	</div>

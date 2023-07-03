@@ -17,25 +17,22 @@ const navItems = [
 const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 ---
 
-<div class="grid grid-cols-7 opacity-30 hover:opacity-100 transition-opacity">
-	<div class="justify-self-start font-normal tracking-widest text-xl col-span-3 px-1">
+<div class="flex opacity-30 hover:opacity-100 transition-opacity">
+	<div class="justify-self-start font-normal tracking-widest text-xl px-1 shrink italic sm:translate-y-1">
 		{pageTitle}
 	</div>
-	<div class="flex font-light justify-end items-end col-span-4">
+	<div class="flex font-light justify-end items-end grow">
 		{navItems.map((item, index) =>
-			<a class="px-1.5 flex-initial hover:-translate-y-0.5 transition" href={item.url}>
+			<a class="px-2  flex-initial hover:-translate-y-1 transition block " href={item.url}>
 			{
 				Astro.url.pathname === item.url ?
 					<span class="transition overline ">{item.name}</span> : null
 			}
 			{
 				Astro.url.pathname !== item.url ?
-					<span class="hover:underline hover:underline-offset-2 font-bold ">{item.name}</span> : null
+					<span class="font-bold">{item.name}</span> : null
 			}
 			</a>
 		)}
 	</div>
 </div>
-
-
-<hr>

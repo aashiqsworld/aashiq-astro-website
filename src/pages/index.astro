@@ -5,29 +5,60 @@ import BlogCard from '../components/BlogCard.astro';
 
 const allProjects = await Astro.glob('../pages/posts/*.md');
 
-const featuredPosts = ["vss", "aivrit"]
+const featuredPosts = ["vss", "aivrit", "coordinate"]
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 
-	<div>
-		Hi 👋 I'm Aashiq, an XR and Graphics Developer. 
+
+	<div class=" text-md font-light">
+		Hi 👋 I'm Aashiq
+		<br>
+		an <span class="font-bold tracking-wide">XR and Graphics Developer</span>.
+		<br>
+		<br>
+		I'm passionate about 
+		<br>
+		<span class="font-bold tracking-wide">computer graphics</span> 🌼
+		<br>
+		<span class="font-bold tracking-wide">spatial computing</span> 🥽
+		<br>
+		and <span class="font-bold tracking-wide">immersive storytelling</span> 📖
+		<br>
+
+
+
+		<br>
+
+		you can view my <a class="text-teal-700 underline underline-offset-2" href=""> <span class="font-bold tracking-wide">resume</span> here</a>
+
+		<br><br>
+		or check out some of my <span class="font-bold tracking-wide">projects</span> below.
+
 	</div>
-	<div>
-		<!-- I  -->
-	</div>
 
+	<div class="">
 
-
-
-	
-
-	<div class="my-8">
-		Featured Projects:
-		{allProjects.map((project) => 
+		<!-- RENDERS THE POSTS IN ORDER OF ARRAY -->
+		{
+			featuredPosts.map((post) => 
+			allProjects.findIndex(e => e.frontmatter.code === post) > -1 ? 
+			<BlogCard 
+			title={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.title} 
+			description={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.description} 
+			imageURL={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.image.url} 
+			imageAlt={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.image.alt} 
+			subtitle={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.subtitle} 
+			url={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].url} 
+			tools={allProjects[allProjects.findIndex(e => e.frontmatter.code === post)].frontmatter.tools}/>
+			: null
+		)}
+		
+		<!-- DOES NOT RENDER POSTS IN ORDER -->
+		<!-- {allProjects.map((project) => 
 		featuredPosts.includes(project.frontmatter.code) ? 
 		
 		<BlogCard title={project.frontmatter.title} description={project.frontmatter.description} imageURL={project.frontmatter.image.url} imageAlt={project.frontmatter.image.alt} subtitle={project.frontmatter.subtitle} url={project.url} tools={project.frontmatter.tools}/> : null
-		)}
+		)} -->
 	</div>
 </BaseLayout>
