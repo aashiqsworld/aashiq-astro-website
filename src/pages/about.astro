@@ -5,28 +5,25 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-<div>
-	pronounced AH-shik
-	<br> <br>
-	Hi! I'm Aashiq. [TODO]
+	<div class="text-lg font-light">
+		<div class="text-center my-8">
+			pronounced AH-shik
+		</div>
+		<div class="text-center my-8">
+			I currently reside in Arizona. 
+		</div>
+		<div class="text-center mt-8">
+			You can contact me below: 
+		</div>
+	</div>
 
-	
-</div>
-
-<br>
-<!-- here: <span class="font-mono p-2 bg-stone-200"> me 🐌 aashiqshaikh 🛞 com</span> -->
-
-You can contact me below: 
-
-
-<div class="">
+<div class="grid place-items-center">
 	
 	<form name="contact-form" method="POST" data-netlify="true">
-		<div class="mt-5">
+		<div class="mt-4">
 		  <input type="text" name="Name" class="
 		  mt-1
 		  block
-		  w-1/2
 		  rounded-md
 		  bg-gray-100
 		  border-transparent
@@ -34,11 +31,10 @@ You can contact me below:
 		  focus:border-gray-200 focus:bg-white focus:ring-0
 		" id="name" placeholder="Name" required>
 		</div>
-		<div class="mt-5">
+		<div class="mt-4">
 		  <input type="email" name="Email" class="
 		  mt-1
 		  block
-		  w-1/2
 		  rounded-md
 		  bg-gray-100
 		  border-transparent
@@ -46,11 +42,10 @@ You can contact me below:
 		  focus:border-gray-200 focus:bg-white focus:ring-0
 		" id="email" placeholder="Email" required>
 		</div>
-		<div class="mt-5">
+		<div class="mt-4">
 		  <textarea id="message" name="Message" class="
 		  mt-1
 		  block
-		  w-1/2
 		  rounded-md
 		  bg-gray-100
 		  border-transparent
