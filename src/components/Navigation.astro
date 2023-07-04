@@ -19,17 +19,17 @@ const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 
 <div class="flex opacity-25 hover:opacity-100 transition-opacity">
 	<div class="justify-self-start font-normal tracking-widest text-xl px-1 shrink italic sm:translate-y-1">
-		{Astro.url.pathname}
+		{pageTitle}
 	</div>
 	<div class="flex font-light justify-end items-end grow">
 		{navItems.map((item, index) =>
 			<a class="px-2  flex-initial hover:-translate-y-1 transition block " href={item.url}>
 			{
-				Astro.url.pathname === item.url ?
+				Astro.url.pathname === item.url || Astro.url.pathname === item.url+'/' ?
 					<span class="transition overline ">{item.name}</span> : null
 			}
 			{
-				Astro.url.pathname !== item.url ?
+				Astro.url.pathname !== item.url && Astro.url.pathname !== item.url+'/' ?
 					<span class="">{item.name}</span> : null
 			}
 			</a>
