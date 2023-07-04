@@ -17,9 +17,14 @@ const pageTitle = "Aashiq's Projects";
 		<div class="text-xl">
 			{frontmatter.subtitle}
 		</div>
-	</div>
-		<hr>
+		<div>
+			{frontmatter.links != null ? frontmatter.links.map((link) => <a class="mr-2 text-teal-700 underline underline-offset-4" href={link.url}>{link.name}</a>) : null}
+		</div>
+	</div >
+		<!-- <hr> -->
 		<br>
+	<div class="whitespace-pre-line">
 		<slot/>
+	</div>
 	
 </BaseLayout>

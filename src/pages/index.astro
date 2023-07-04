@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Aashiq Shaikh";
 import BlogCard from '../components/BlogCard.astro';
 
-const allProjects = await Astro.glob('../pages/posts/*.md');
+const allProjects = await Astro.glob('../pages/posts/*.mdx');
 
 const featuredPosts = ["vss", "aivrit", "coordinate"]
 ---
@@ -11,26 +11,23 @@ const featuredPosts = ["vss", "aivrit", "coordinate"]
 <BaseLayout pageTitle={pageTitle}>
 	<hr class=" -translate-y-3">
 
-	<div class=" text-md font-light">
+	<div class=" text-md font-light leading-tight">
 		Hi 👋 I'm Aashiq
+		
 		<br>
-		an <span class="font-bold tracking-wide">XR and Graphics Developer</span>.
 		<br>
 		<br>
-		I'm passionate about 
+		
+		computer graphics, spatial computing, and immersive storytelling
+		
 		<br>
-		<span class="font-bold tracking-wide">computer graphics</span> 🌼
-		<br>
-		<span class="font-bold tracking-wide">spatial computing</span> 🥽
-		<br>
-		and <span class="font-bold tracking-wide">immersive storytelling</span> 📖
 		<br>
 
-
-
-		<br>
-
-		you can view my <a class="text-teal-700 underline underline-offset-2" href=""> <span class="font-bold tracking-wide">resume</span> here</a>
+		<a class="text-teal-700 underline underline-offset-4" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" >view my <span class="font-bold tracking-wide">resume</span> here
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 inline -translate-y-">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+			</svg>
+		</a>
 
 		<br><br>
 		or check out some of my <span class="font-bold tracking-wide">projects</span> below.

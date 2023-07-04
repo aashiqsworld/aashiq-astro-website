@@ -1,0 +1,24 @@
+---
+layout: ../../layouts/ProjectLayout.astro
+title: 'Volumetric Streaming Systems'
+subtitle: 'Low-Latency Streaming of Live Volumetric Data'
+code: 'vss'
+pubDate: 2022-07-01
+description: 'This is the first post of my new Astro blog.'
+image:
+    url: '/assets/vss.png' 
+    alt: 'VSS.'
+tools: ["volumetric rendering", "HLSL", "Unity", "data compression", "Python"]
+
+links: [
+    {
+        name: "paper",
+        url: "https://dl.acm.org/doi/abs/10.1145/3498361.3538660"
+    },
+    
+]
+---
+
+A volumetric streaming framework we are developing that enables low-latency streaming of live volumetric data. We published an initial characterization of our method at the HotEdgeVideo Workshop at ACM MobiCom 2021.
+
+I am developing a compression method that utilizes existing 2D video compression algorithms to efficiently encode and decode volumetric data while maintaining important visual features. I am also developing a rendering method that renders our compressed volumetric data as full human meshes.
