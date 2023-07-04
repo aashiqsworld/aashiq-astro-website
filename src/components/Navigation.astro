@@ -19,7 +19,7 @@ const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 
 <div class="flex opacity-25 hover:opacity-100 transition-opacity">
 	<div class="justify-self-start font-normal tracking-widest text-xl px-1 shrink italic sm:translate-y-1">
-		{pageTitle}
+		{Astro.url.pathname}
 	</div>
 	<div class="flex font-light justify-end items-end grow">
 		{navItems.map((item, index) =>
