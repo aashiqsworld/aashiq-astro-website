@@ -18,7 +18,7 @@ const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 ---
 
 <div class="flex group">
-	<div class="opacity-25 group-hover:opacity-100 transition justify-self-start font-normal tracking-widest text-xl px-1 shrink italic sm:translate-y-1">
+	<div class="opacity-25 group-hover:opacity-50 transition justify-self-start font-normal tracking-widest text-xl px-1 shrink italic sm:translate-y-1">
 		{pageTitle}
 	</div>
 	<div class="flex font-light justify-end items-end grow">
@@ -26,7 +26,7 @@ const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 			<div class="px-2 flex-initial block">
 			{
 				Astro.url.pathname === item.url || Astro.url.pathname === item.url+'/' ?
-					<span class="transition overline opacity-25 group-hover:opacity-40">{item.name}</span> : null
+					<span class="transition overline opacity-25 group-hover:opacity-50">{item.name}</span> : null
 			}
 			{
 				Astro.url.pathname !== item.url && Astro.url.pathname !== item.url+'/' ?
