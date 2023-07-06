@@ -14,10 +14,11 @@ const {title, subtitle, description, imageURL, imageAlt, url, tools} = Astro.pro
 <div class="w-full mx-auto rounded-sm shadow-sm overflow-hidden transition duration-300 ease-out hover:shadow-lg hover:-translate-y-0.5 hover:translate-x-0.5 mt-2  hover:saturate-200 hover:brightness-100 group hover:animate-pulse" >
 	<div class="md:flex ">
 	  <div class="md:shrink-0"> 
-		<img class="sm:h-48 w-full object-cover md:h-full md:w-48 aspect-[3/1] bg-center opacity-75 group-hover:opacity-100 transition" src={imageURL} alt={imageAlt}>
+		<a href={url}><img class="sm:h-48 w-full object-cover md:h-full md:w-48 aspect-[3/1] bg-center opacity-75 group-hover:opacity-100 transition" src={imageURL} alt={imageAlt}></a>
+		
 	  </div>
 	  <div class="py-3 px-6">
-		<div class="uppercase tracking-wide text-sm text-slate-400 font-semibold">{title}</div>
+		<a href={url}><div class="uppercase tracking-wide text-sm text-slate-400 font-semibold">{title}</div></a>
 		<a href={url} class="block mt-1 text-md leading-tight font-medium text-black hover:underline line-clamp-1 hyphens-auto"><span class="line-clamp-2">{subtitle}</span></a>
 	  </div>
 	</div>
