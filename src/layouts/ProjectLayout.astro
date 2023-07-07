@@ -18,7 +18,7 @@ const pageTitle = "Aashiq's Projects";
 			{frontmatter.subtitle}
 		</div>
 		<div>
-			{frontmatter.links != null ? frontmatter.links.map((link) => <a class="mr-2 text-teal-700 underline underline-offset-4" href={link.url}>{link.name}</a>) : null}
+			{frontmatter.links != null ? frontmatter.links.map((link) => <a class="mr-2 text-teal-700 underline underline-offset-4" target="_blank" rel="noopener noreferrer" href={link.url}>{link.name}</a>) : null}
 		</div>
 	</div >
 		<!-- <hr> -->
