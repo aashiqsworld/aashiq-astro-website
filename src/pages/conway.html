@@ -24,12 +24,14 @@
 			// WebGPU code here
 			if(!navigator.gpu)
 			{
+				canvas.prepend("Your browser does not support WebGPU :( try using desktop Chrome.")
 				throw new Error("WebGPU not supported on this browser.");
 			}
 
 			const adapter = await navigator.gpu.requestAdapter();
 			if(!adapter)
 			{
+				canvas.prepend("Your browser does not support WebGPU :( try using desktop Chrome.")
 				throw new Error("No appropriate GPUAdapter found.");
 			}
 
