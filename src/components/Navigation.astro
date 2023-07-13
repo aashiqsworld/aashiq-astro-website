@@ -31,8 +31,8 @@ const { pageTitle = "Aashiq Shaikh"} = Astro.props;
 			}
 			{
 				Astro.url.pathname !== item.url && Astro.url.pathname !== item.url+'/' ?
-					<a class="py-2 -my-2 " href={item.url}>
-						<span class="hover:underline underline-offset-4 opacity-25 group-hover:opacity-100 transition">{item.name}</span>
+					<a class="py-2 -my-2 hover:underline underline-offset-4 opacity-25 group-hover:opacity-100 transition" href={item.url}>
+						<span class=" ">{item.name}</span>
 					</a> : null
 			}
 			</div>
