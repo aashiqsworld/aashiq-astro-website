@@ -9,7 +9,8 @@
 ├── public/
 ├── src/
 │   └── pages/ [main website pages]
-│   	└── posts/ [markdown files]
+│   	└── posts/ [project markdown files]
+│   	└── drafts/ [draft markdown files, not included in build]
 │   └── layouts/ [layout templates]
 │   └── components/ [reusable components]
 │   └── assets/ [images, hosted files, etc.]
