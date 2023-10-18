@@ -5,7 +5,7 @@ import BlogCard from '../components/BlogCard.astro';
 
 const allProjects = await Astro.glob('../pages/posts/*.mdx');
 
-const featuredPosts = ["kenoma-engine", "vss", "ray-tracer-cpu", "coordinate"]
+const featuredPosts = ["kenoma-engine", "ray-tracer-cpu",  "vss", "coordinate"]
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -14,9 +14,9 @@ const featuredPosts = ["kenoma-engine", "vss", "ray-tracer-cpu", "coordinate"]
 	<div class="text-xl font-medium leading-tight flex-row justify-center">
 		<div class="text-center mt-10 flex justify-center z-10 relative ">
 			Hi
-			<svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 -translate-y-1 ml-1.5 stroke-2
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 -translate-y-1 ml-1.5 stroke-2 stroke-gray-400
 			fill-current text-white" viewBox="0 0 72 72">
-				<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+				<g fill="none"  stroke-linecap="round" stroke-linejoin="round">
 					<path d="M18.657 19.24a3.531 3.531 0 1 0-5.563 4.25l11.533 15.1 2.688 3.387-7.89-10.331a3.531 3.531 0 1 0-5.564 4.249l7.891 10.331 6.27 7.899c5.468 6.273 14.515 5.93 20.787.465a19.617 19.617 0 0 0 6.515-12.31c.386-4.233.807-15.301.807-15.301-.182-2.601-3.135-4.524-3.515-3.18l-4.894 9.757-3.366-4.223 3.366 4.223-3.366-4.223-13.465-17.208a3.531 3.531 0 1 0-5.563 4.249l4.249 5.563L36 30.417l-13.419-17.68a3.531 3.531 0 1 0-5.563 4.248L31.689 36"/>
 					<path stroke-miterlimit="10" d="M11.673 42.872c0 2.566 1.747 4.643 3.905 4.643M7.061 42.437c0 5.596 3.81 10.124 8.517 10.124M45.262 21.238c0-2.567-1.747-4.643-3.906-4.643M49.873 21.673c0-5.596-3.81-10.124-8.517-10.124"/>
 				</g>
@@ -25,39 +25,39 @@ const featuredPosts = ["kenoma-engine", "vss", "ray-tracer-cpu", "coordinate"]
 
 
 			<!-- GLOW -->
-			<div class="absolute inset-0 flex justify-center items-center z-0 -translate-y-2 blur-3xl font-extrabold">
-				Hi
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 -translate-y-1 ml-1.5 stroke-2
-			fill-current text-white" viewBox="0 0 72 72">
-					<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M18.657 19.24a3.531 3.531 0 1 0-5.563 4.25l11.533 15.1 2.688 3.387-7.89-10.331a3.531 3.531 0 1 0-5.564 4.249l7.891 10.331 6.27 7.899c5.468 6.273 14.515 5.93 20.787.465a19.617 19.617 0 0 0 6.515-12.31c.386-4.233.807-15.301.807-15.301-.182-2.601-3.135-4.524-3.515-3.18l-4.894 9.757-3.366-4.223 3.366 4.223-3.366-4.223-13.465-17.208a3.531 3.531 0 1 0-5.563 4.249l4.249 5.563L36 30.417l-13.419-17.68a3.531 3.531 0 1 0-5.563 4.248L31.689 36"/>
-						<path stroke-miterlimit="10" d="M11.673 42.872c0 2.566 1.747 4.643 3.905 4.643M7.061 42.437c0 5.596 3.81 10.124 8.517 10.124M45.262 21.238c0-2.567-1.747-4.643-3.906-4.643M49.873 21.673c0-5.596-3.81-10.124-8.517-10.124"/>
-					</g>
-				</svg>
+			<!--<div class="absolute inset-0 flex justify-center items-center z-0 -translate-y-2 blur-xl font-extrabold opacity-50">-->
+			<!--	Hi-->
+			<!--	<svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 -translate-y-1 ml-1.5 stroke-2-->
+			<!--fill-current text-white" viewBox="0 0 72 72">-->
+			<!--		<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">-->
+			<!--			<path d="M18.657 19.24a3.531 3.531 0 1 0-5.563 4.25l11.533 15.1 2.688 3.387-7.89-10.331a3.531 3.531 0 1 0-5.564 4.249l7.891 10.331 6.27 7.899c5.468 6.273 14.515 5.93 20.787.465a19.617 19.617 0 0 0 6.515-12.31c.386-4.233.807-15.301.807-15.301-.182-2.601-3.135-4.524-3.515-3.18l-4.894 9.757-3.366-4.223 3.366 4.223-3.366-4.223-13.465-17.208a3.531 3.531 0 1 0-5.563 4.249l4.249 5.563L36 30.417l-13.419-17.68a3.531 3.531 0 1 0-5.563 4.248L31.689 36"/>-->
+			<!--			<path stroke-miterlimit="10" d="M11.673 42.872c0 2.566 1.747 4.64 3 3.905 4.643M7.061 42.437c0 5.596 3.81 10.124 8.517 10.124M45.262 21.238c0-2.567-1.747-4.643-3.906-4.643M49.873 21.673c0-5.596-3.81-10.124-8.517-10.124"/>-->
+			<!--		</g>-->
+			<!--	</svg>-->
 
-				I'm Aashiq
-			</div>
+			<!--	I'm Aashiq-->
+			<!--</div>-->
 		</div>
 
 
 
 
-		<div class="text-center mt-1 z-10 relative">
+		<div class="text-center mt-1 z-10 relative ">
 			I work in
-			<span class="font-medium bg-clip-text text-transparent bg-gradient-to-br from-pink-400 to-red-600">computer graphics</span>,
-			<span class="font-medium bg-clip-text text-transparent bg-gradient-to-br from-emerald-500 to-lime-600">spatial computing</span>, <span class="hidden sm:inline"><br></span>
+			<span class="font-medium text-gray-300 ">computer graphics</span>,
+			<span class="font-medium text-gray-300">spatial computing</span>, <span class="hidden sm:inline"><br></span>
 			and
-			<span class="font-medium bg-clip-text text-transparent bg-gradient-to-tl from-cyan-400  to-violet-500">immersive storytelling</span>
+			<span class="font-medium text-gray-300 ">immersive storytelling</span>
 
 
 			<!-- GLOW -->
-			<div class="absolute inset-0 justify-center items-center z-0 font-extrabold blur-3xl">
-				I work in
-				<span class=" bg-clip-text text-transparent bg-gradient-to-br from-pink-400 to-red-600">computer graphics</span>,
-				<span class=" bg-clip-text text-transparent bg-gradient-to-br from-emerald-500 to-lime-600">spatial computing</span>, <span class="hidden sm:inline"><br></span>
-				and
-				<span class=" bg-clip-text text-transparent bg-gradient-to-tl from-cyan-400  to-violet-500">immersive storytelling</span>
-			</div>
+			<!--<div class="absolute inset-0 justify-center items-center z-0 font-extrabold blur-xl opacity-50">-->
+			<!--	I work in-->
+			<!--	<span class=" bg-clip-text text-transparent bg-gradient-to-br from-pink-400 to-red-600">computer graphics</span>,-->
+			<!--	<span class=" bg-clip-text text-transparent bg-gradient-to-br from-emerald-500 to-lime-600">spatial computing</span>, <span class="hidden sm:inline"><br></span>-->
+			<!--	and-->
+			<!--	<span class=" bg-clip-text text-transparent bg-gradient-to-tl from-cyan-400  to-violet-500">immersive storytelling</span>-->
+			<!--</div>-->
 
 			<br>
 
@@ -66,9 +66,9 @@ const featuredPosts = ["kenoma-engine", "vss", "ray-tracer-cpu", "coordinate"]
 
 
 		
-		<div class="mt-12 text-center underline">
+		<div class="mt-12 text-center underline decoration-rose-900 text-gray-300">
 			<a class="" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" >view my <span class="font-medium tracking-wide">resume</span>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-4 h-4 stroke-2 -translate-y-0.5">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline w-4 h-4 stroke-2 stroke-gray-300 -translate-y-0.5">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
 				  </svg>
 			</a>
