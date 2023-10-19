@@ -19,15 +19,16 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		<title>{pageTitle}</title>
 	</head>
 
-	
-	
-	<body class="antialiased max-w-xl mb-40 mx-4 mt-24 sm:mx-auto bg-no-reapeat bg-fixed text-gray-400
-bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black
+
+	<!--bg-[radial-gradient(ellipse_at_bottom,_var(&#45;&#45;tw-gradient-stops))] from-gray-800 via-gray-900 to-[#1c1a22]-->
+
+	<body class="antialiased max-w-xl mb-40 mx-4 mt-24 sm:mx-auto bg-no-reapeat bg-fixed text-gray-300
 	 min-w-0 flex-col px-2" style="
 
 
-        /*background-color: rgb(0, 0, 0);*/
-        /*background-image: radial-gradient(at 86% 25%, rgb(23, 23, 23) 0, transparent 0%), radial-gradient(at 45% 43%, rgb(30, 41, 59) 0, transparent 58%), radial-gradient(at 19% 28%, rgb(91, 33, 182) 0, transparent 0%), radial-gradient(at 68% 20%, rgb(17, 24, 39) 0, transparent 89%), radial-gradient(at 78% 100%, rgb(225, 29, 72) 0, transparent 64%);*/
+
+        background-color: rgb(0, 15, 0);
+        background-image: radial-gradient(at 83% 15%, rgb(120, 53, 15) 0, transparent 79%), radial-gradient(at 46% 84%, rgb(76, 29, 149) 0, transparent 98%), radial-gradient(at 94% 86%, rgb(16,79,2) 0, transparent 68%), radial-gradient(at 24% 96%, rgb(24, 24, 27) 0, transparent 7%), radial-gradient(at 20% 55%, rgb(19, 78, 74) 0, transparent 73%);
 
         ">
 			<Navigation pageTitle = {pageTitle}/>
